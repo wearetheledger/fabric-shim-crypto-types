@@ -13,9 +13,9 @@ declare module 'fabric-shim-crypto' {
 declare class ShimCrypto {
     constructor(stub: Object);
 
-    public static readonly ENCRYPT_KEY = "encrypt-key";
-    public static readonly INIT_VECTOR = "iv";
-    public static readonly SIGN_KEY = "sign-key";
+    ENCRYPT_KEY: string;
+    SIGN_KEY: string;
+    INIT_VECTOR: string;
 
 
     encrypt(plaintext: string): Buffer;
@@ -23,7 +23,6 @@ declare class ShimCrypto {
 
     sign(message: string): Buffer;
     verify(signature: Buffer, message: string): VerifyResponse;
-
 
 }
 
