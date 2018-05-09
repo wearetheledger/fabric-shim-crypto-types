@@ -17,7 +17,6 @@
     "forceConsistentCasingInFileNames": true
   },
   "files": [
-    "index.d.ts",
-    "fabric-shim-tests.ts"
+    "index.d.ts"
   ]
 }

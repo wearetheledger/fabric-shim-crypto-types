@@ -7,24 +7,27 @@
 /* tslint:disable */
 
 declare module 'fabric-shim-crypto' {
+    export = ShimCrypto;
+}
 
-    import { Logger } from 'log4js';
-    import { Timestamp } from 'google-protobuf/google/protobuf/timestamp_pb';
+declare class ShimCrypto {
+    constructor(stub: Object);
 
-    export const ENCRYPT_KEY = 'encrypt-key';
-    export const INIT_VECTOR = 'iv';
-    export const SIGN_KEY = 'sign-key';
-    export const ALGORITHM = 'aes-256-cbc';
+    public static readonly ENCRYPT_KEY = "encrypt-key";
+    public static readonly INIT_VECTOR = "iv";
+    public static readonly SIGN_KEY = "sign-key";
 
-    export function encrypt(plaintext: string): Buffer;
-    export function decrypt(ciphertext: string): Buffer;
 
-    export function sign(message: string): Buffer;
-    export function verify(signature: Buffer, message: string): VerifyResponse;
+    encrypt(plaintext: string): Buffer;
+    decrypt(ciphertext: string): Buffer;
 
-    interface VerifyResponse {
-        ok: boolean;
-        error?: Error;
-    }
+    sign(message: string): Buffer;
+    verify(signature: Buffer, message: string): VerifyResponse;
 
+
+}
+
+interface VerifyResponse {
+    ok: boolean;
+    error?: Error;
 }
