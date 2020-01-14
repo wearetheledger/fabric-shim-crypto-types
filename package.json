@@ -1,6 +1,6 @@
 {
     "name": "@theledger/fabric-shim-crypto-types",
-    "version": "2.0.0",
+    "version": "2.1.0",
     "description": "Types for the fabric-shim-crypto package",
     "main": "",
     "scripts": {},
