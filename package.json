@@ -10,7 +10,9 @@
         "type": "git",
         "url": "git+https://github.com/wearetheledger/fabric-shim-crypto-types.git"
     },
-    "dependencies": {},
+    "dependencies": {
+        "@types/node": "^13.1.6"
+    },
     "devDependencies": {
         "typescript": "^2.8.3"
     }
