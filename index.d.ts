@@ -13,7 +13,7 @@ declare module 'fabric-shim-crypto' {
         /*~ If you want to expose types from your module as well, you can
         *~ place them in this block.
         */
-        export class ShimCrypto {
+        export class ShimCryptoClass {
             constructor(stub: Object);
 
             ENCRYPT_KEY: string;
